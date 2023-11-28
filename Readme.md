@@ -53,13 +53,16 @@ Configuration
 ### S3 Bucket
 
 -   Resource: `aws_s3_bucket.example`
-    -   Creates an S3 bucket for storing application data.
+    -   Creates an S3 bucket for storing application data.![Screenshot from 2023-11-28 01-44-59](https://github.com/Sayandeep06/Terraform_aws_infra/assets/100061797/cc8897f6-06ea-40ce-a015-e5f5adf22b85)
+
 
 ### EC2 Instances
 
 -   Resources: `aws_instance.webserver1` and `aws_instance.webserver2`
     -   Creates two EC2 instances with specified AMI, instance type, security group, and subnet.
     -   Attaches user data scripts for additional configuration.
+      ![Screenshot from 2023-11-28 01-44-42](https://github.com/Sayandeep06/Terraform_aws_infra/assets/100061797/23383517-2f8e-4d73-8e51-270e893f60e9)
+
 
 ### Application Load Balancer (ALB)
 
@@ -68,11 +71,18 @@ Configuration
     -   Associates the ALB with the security group and subnets.
     -   Configures health checks for the target group.
     -   Attaches EC2 instances to the target group.
+      ![Screenshot from 2023-11-28 01-45-50](https://github.com/Sayandeep06/Terraform_aws_infra/assets/100061797/70eb4adc-dd93-47eb-81e4-51a6efe3da56)
+![Screenshot from 2023-11-28 01-46-05](https://github.com/Sayandeep06/Terraform_aws_infra/assets/100061797/36600937-d8ff-4daf-a709-2d48363c2b9b)
+
 
 ### Outputs
 
 -   Output: `loadbalancerdns`
-    -   Displays the DNS name of the created ALB for accessing the web application.
+    -   Displays the DNS name of the created ALB for accessing the web application. The two different webpages showing that the load balancing is working properly.
+      ![Screenshot from 2023-11-28 01-44-23](https://github.com/Sayandeep06/Terraform_aws_infra/assets/100061797/45eac077-04d4-4ce5-9c21-4283a749a946)
+![Screenshot from 2023-11-28 01-50-42](https://github.com/Sayandeep06/Terraform_aws_infra/assets/100061797/ca7f3426-17c9-426c-902b-34bdef6d5b30)
+![Screenshot from 2023-11-28 01-50-48](https://github.com/Sayandeep06/Terraform_aws_infra/assets/100061797/8a0807aa-1d41-4061-82d1-39529b3da873)
+
 
 Usage
 -----
@@ -92,7 +102,8 @@ To destroy the created infrastructure, run:
 
 `terraform destroy`
 
-Confirm the destruction by typing `yes` when prompted.
+Confirm the destruction by typing `yes` when prompted.![Screenshot from 2023-11-28 01-53-50](https://github.com/Sayandeep06/Terraform_aws_infra/assets/100061797/af202740-490b-4a80-8876-2d44731d178c)
+
 
 Note
 ----
